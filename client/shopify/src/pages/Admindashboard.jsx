@@ -86,7 +86,7 @@ const AdminDashboard = () => {
         {products.map((product) => (
           <div key={product._id}>
             
-                      <img src={`http://localhost:5000/uploads/${product.image}`} alt={product.name} width="100" />
+                      <img src={`${axios.defaults.baseURL}/uploads/${product.image}`} alt={product.name} width="100" />
             <h3>{product.name}</h3>
             <p>${product.price}</p>
             <button onClick={() => deleteProduct(product._id)}>Delete</button>

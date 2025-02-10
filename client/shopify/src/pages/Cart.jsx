@@ -21,7 +21,7 @@ console.log(totalPrice);
           {cart?.items?.map((item) => (
             <Card key={item._id} className="mb-3 p-3">
               <div className="d-flex align-items-center">
-                <img src={`http://localhost:5000/uploads/${item.productId.image}`} alt={item.name} style={{ width: "80px", height: "80px", marginRight: "15px" }} />
+                <img src={`${axios.defaults.baseURL}/uploads/${item.productId.image}`} alt={item.name} style={{ width: "80px", height: "80px", marginRight: "15px" }} />
                 <div>
                   <h5>{item.productId.name}</h5>
                   <p>Price: ${item.productId.price}</p>
